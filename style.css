@@ -1,0 +1,100 @@
+   .icon {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'liga';
+        }
+
+        .minimalist-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            background-color: transparent;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .minimalist-header .logo img {
+            height: 50px;
+            transition: height 0.3s ease-in-out;
+        }
+
+        .minimalist-header .contact-icons a,
+        .minimalist-header .search-icon {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            margin-left: 1rem; /* Spacing between icons */
+            color: #333; /* Default dark mode icon color */
+        }
+        .dark .minimalist-header .contact-icons a,
+        .dark .minimalist-header .search-icon {
+            color: white; /* Light mode icon color */
+        }
+
+        .minimalist-header.visible {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 2rem;
+        }
+        .dark .minimalist-header.visible {
+            background-color: rgba(18, 18, 18, 0.9);
+        }
+
+        .minimalist-header.visible .logo img {
+            height: 40px;
+        }
+
+        .minimalist-header.visible .contact-icons a,
+        .minimalist-header.visible .search-icon {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .minimalist-header:hover {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .dark .minimalist-header:hover {
+            background-color: rgba(18, 18, 18, 0.95);
+        }
+
+        .minimalist-header:hover .contact-icons a,
+        .minimalist-header:hover .search-icon {
+            opacity: 1;
+            transform: translateY(0);
+        }
+         .minimalist-header:hover .logo img {
+            height: 45px;
+        }
+
+        .hamburger-menu {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .hamburger-icon {
+            width: 24px;
+            height: 3px;
+            background-color: #333;
+            margin: 4px 0;
+            transition: all 0.3s ease-in-out;
+        }
+        .dark .hamburger-icon {
+            background-color: white;
+        }
